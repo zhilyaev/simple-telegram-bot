@@ -28,3 +28,28 @@ bot.on('message', (msg) => {
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, 'Received your message');
 });
+ // Команды для бота.
+ bot.onText(/\/age(.+)/,(msg,match)=>{
+   ageValue = msg 
+   let output 
+   if (ageValue > 18 ){
+     output = "she(he?!?!?!?) is legal"
+   }
+   else {
+     output = "Bro u have a problem! Run!"
+   }
+
+   bot.onText(/\/help(,+)/,(msg,match)=>{
+    switch (msg) {
+        case 'noting':{ 
+          bot.sendMessage = "welcom to age bot, here u can found some discription. This bot create to see howe api work and, maybe, helps u to not to go in jail. No thx bro... ur welcom. Have a goode day " ;
+          break
+        }
+        case 'wtf ':{
+          bot.sendMessage = "idk bro";
+          break
+        } 
+   }
+
+   });
+  

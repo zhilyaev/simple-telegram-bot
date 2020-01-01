@@ -1,0 +1,13 @@
+name: Heroku deploy
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: GitHub Action for Heroku
+      uses: actions/heroku@1.0.0
+      env:
+        CI: true
+        TG_TOKEN: ${{secrets.TG_TOKEN}} 

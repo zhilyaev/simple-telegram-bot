@@ -11,3 +11,4 @@ jobs:
       env:
         CI: true
         TG_TOKEN: ${{secrets.TG_TOKEN}} 
+        HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
